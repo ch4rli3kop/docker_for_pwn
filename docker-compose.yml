@@ -1,0 +1,53 @@
+version: "3.8"
+services:
+  ctf_22:
+    container_name: ctf_22
+    build:
+      context: ./ctf_22
+      args:
+        - USERNAME=${USERNAME}
+        - PASSWD=${PASSWD}
+        - CONT_PATH=${CONT_PATH}
+    image: ch4rli3_ctf_22:v1.0
+    ports:
+      - "12345:12345"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ${HOST_PATH}:${CONT_PATH}
+  ctf_20:
+    container_name: ctf_20
+    build:
+      context: ./ctf_20
+      args:
+        - USERNAME=${USERNAME}
+        - PASSWD=${PASSWD}
+        - CONT_PATH=${CONT_PATH}
+    image: ch4rli3_ctf_20:v1.0
+    ports:
+      - "12346:12345"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ${HOST_PATH}:${CONT_PATH}
+  ctf_18:
+    container_name: ctf_18
+    build:
+      context: ./ctf_18
+      args:
+        - USERNAME=${USERNAME}
+        - PASSWD=${PASSWD}
+        - CONT_PATH=${CONT_PATH}
+    image: ch4rli3_ctf_18:v1.0
+    ports:
+      - "12347:12345"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ${HOST_PATH}:${CONT_PATH}
