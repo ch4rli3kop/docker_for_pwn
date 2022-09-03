@@ -84,5 +84,4 @@ $ gdb-gef
 ### Notes
 
 - The apt-mirror server in `dockerfile`s is written based in South Korea. It is better to modify the server address as your location like [here](https://github.com/ch4rli3kop/docker_for_pwn/blob/03d843468cec002307fb0bd0aa2ae65ee9e88f82/ctf_22/Dockerfile#L13).
-- It works in m1.
 
